@@ -1,0 +1,21 @@
+Project 3: Automated Enterprise Network & Endpoint Management Tools
+Overview
+A collection of modular PowerShell and Python automation tools designed for network environment validation, system diagnostics, and administrative task automation.
+
+Key Features
+Network Health Diagnostic Suite: PowerShell script that validates VLAN routing, DNS resolution, bandwidth limits, and ping latencies across subnets.
+System Auditing & Compliance: Python utility that parses local and remote system configuration files against baseline security benchmarks.
+Log Analysis Tool: CLI tool using Python to parse server logs (Nginx, Syslog, or Windows Event Logs) for rapid root-cause analysis of incidents.
+Repository Structure
+
+sysadmin-automation-toolkit/
+├── powershell/
+│   ├── Test-NetworkInfrastructure.ps1
+│   └── Audit-SystemSecurity.ps1
+├── python/
+│   ├── log_analyzer.py
+│   └── vlan_checker.py
+├── tests/
+│   └── test_log_analyzer.py
+├── requirements.txt
+└── README.md
