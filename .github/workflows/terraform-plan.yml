@@ -1,0 +1,39 @@
+name: Terraform validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+# This workflow does not run terraform plan or apply.
+# Plan/apply need an Azure subscription and credentials. This portfolio
+# repository is a lab; CI only proves the configuration is syntactically
+# valid and internally consistent.
+jobs:
+  validate:
+    name: terraform validate (${{ matrix.environment }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        environment: [dev, prod]
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.9.8
+          terraform_wrapper: false
+
+      - name: Initialize providers (no backend)
+        working-directory: terraform/environments/${{ matrix.environment }}
+        run: terraform init -backend=false -input=false -no-color
+
+      - name: Validate configuration
+        working-directory: terraform/environments/${{ matrix.environment }}
+        run: terraform validate -no-color
