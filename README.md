@@ -1,6 +1,6 @@
 # Multi-region Azure hybrid infrastructure and zero-trust identity
 
-Portfolio lab by **Ngu Brice Che** ([supbrice](https://github.com/supbrice)), Systems and Infrastructure Administrator. Azure Solutions Architect Expert (November 2024) and Azure Administrator Associate (September 2024). CCNA track.
+Portfolio lab by **Brice** ([supbrice](https://github.com/supbrice)), Systems and Infrastructure Administrator. Azure Solutions Architect Expert (November 2024) and Azure Administrator Associate (September 2024). CCNA track.
 
 This repository is a **Terraform lab**, not a record of a live customer or employer deployment. It turns the identity, hybrid networking, and IaC work I did as a Systems Administrator at nVent HOFFMAN (Anoka, MN, March 2021–August 2022) into a reviewable, lintable codebase: VNets and NSGs, a site-to-site VPN hub, Entra ID / RBAC placeholders, a management VM with no public IP, and Azure Monitor / Log Analytics hooks.
 
