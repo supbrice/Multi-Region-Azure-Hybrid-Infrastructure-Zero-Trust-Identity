@@ -17,7 +17,7 @@ locals {
       project     = "azure-hybrid-zero-trust"
       environment = var.environment
       managed_by  = "terraform"
-      owner       = "Ngu Brice Che"
+      owner       = "Brice"
       purpose     = "portfolio-lab"
     },
     var.tags
